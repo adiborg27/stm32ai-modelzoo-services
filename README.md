@@ -15,7 +15,11 @@ The performances on reference STM32 MCU and MPU are provided for float and quant
 This project is organized by application, for each application you will have a step by step guide that will indicate how to train and deploy the models.
 
 ## What's new in releases :
+<details open><summary><b>4.0:</b></summary>
 
+### 📢 4.0 Release is coming soon ...!
+</details>
+                                                          
 <details open><summary><b>3.2:</b></summary>
 
 * Support of **STEdgeAI Core v2.2.0** (STM32Cube.AI v10.2.0).
