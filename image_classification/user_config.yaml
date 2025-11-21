@@ -38,7 +38,7 @@ training:
   model:    # Use it if you want to use a model from the zoo, mutually exclusive with 'general.model_path'
     name: mobilenet
     version: v2
-    alpha: 0.25
+    alpha: 0.35
     input_shape: (64, 64, 3)
     pretrained_weights: imagenet   # Optional, use it if you want to use the 'imagenet' pretrained weights, available only for MobileNet models
     pretrained_model_path:         # Optional, available for transfer learning with all models, mutually exclusive with pretrained_weights
