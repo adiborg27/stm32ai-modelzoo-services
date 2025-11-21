@@ -30,31 +30,7 @@ preprocessing:
     aspect_ratio: fit
   color_mode: rgb
 
-data_augmentation:    # Optional section
-  random_contrast:
-    factor: 0.4
-  random_brightness:
-    factor: 0.05
-  random_flip:
-    mode: horizontal
-  random_translation:
-    width_factor: 0.25
-    height_factor: 0.25
-    fill_mode: reflect
-    interpolation: nearest
-  random_rotation:
-    factor: 0.125
-    fill_mode: reflect
-    interpolation: nearest
-  random_zoom:
-    width_factor: 0.25
-    height_factor: 0.25
-    fill_mode: reflect
-    interpolation: nearest
-  random_shear:
-    factor: 0.0515
-    fill_mode: wrap
-    interpolation: nearest
+
 #  random_gaussian_noise:
 #    stddev: (0.0001, 0.005)
 
