@@ -18,7 +18,7 @@ dataset:
   validation_path:        # Optional
   validation_split: 0.2   # Optional, default value is 0.2
   test_path:              # Optional
-  quantization_path: ./datasets/flower_photos     # Optional
+  quantization_path: ./datasets/flower_photos     # Optiona
   quantization_split:  0.1   # Optional
   check_image_files: False  # Optional, set it to True if you want to check that all the image files can be read successfully
   seed: 127               # Optional, there is a default seed
