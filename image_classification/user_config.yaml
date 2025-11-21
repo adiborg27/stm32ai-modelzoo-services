@@ -18,8 +18,8 @@ dataset:
   validation_path:        # Optional
   validation_split: 0.2   # Optional, default value is 0.2
   test_path:              # Optional
-  quantization_path:      # Optional
-  quantization_split:     # Optional
+  quantization_path: ./datasets/flower_photos     # Optional
+  quantization_split:  0.1   # Optional
   check_image_files: False  # Optional, set it to True if you want to check that all the image files can be read successfully
   seed: 127               # Optional, there is a default seed
 
@@ -38,7 +38,7 @@ training:
   model:    # Use it if you want to use a model from the zoo, mutually exclusive with 'general.model_path'
     name: mobilenet
     version: v2
-    alpha: 0.35
+    alpha: 0.25
     input_shape: (64, 64, 3)
     pretrained_weights: imagenet   # Optional, use it if you want to use the 'imagenet' pretrained weights, available only for MobileNet models
     pretrained_model_path:         # Optional, available for transfer learning with all models, mutually exclusive with pretrained_weights
@@ -47,7 +47,7 @@ training:
   frozen_layers: None  #(0:-1)            # Optional, use if you want to freeze some layers (by default all layers are trainable)
   dropout: 0.3                     # Optional, use it if you want a dropout layer to be included in the model
   batch_size: 64
-  epochs: 112
+  epochs: 60
   optimizer:
     Adam:
       learning_rate: 0.001
@@ -76,7 +76,7 @@ quantization:
   quantizer: TFlite_converter
   quantization_type: PTQ
   quantization_input_type: uint8
-  quantization_output_type: float
+  quantization_output_type: uint8
   granularity: per_channel   #per_tensor
   optimize: False   #can be True if per_tensor
   export_dir: quantized_models
@@ -95,15 +95,15 @@ tools:
   path_to_cubeIDE: C:/ST/STM32CubeIDE_<*.*.*>/STM32CubeIDE/stm32cubeide.exe
 
 benchmarking:
-  board: STM32H747I-DISCO
+  board: NUCLEO-F446RE
 
 deployment:
-  c_project_path: ../application_code/image_classification/STM32N6
+  c_project_path: ../application_code/image_classification/STM32F4
   IDE: GCC
   verbosity: 1
   hardware_setup:
-    serie: STM32H7
-    board: STM32H747I-DISCO
+    serie: STM32F4
+    board: NUCLEO-F446RE
 
 mlflow:
   uri: ./src/experiments_outputs/mlruns
